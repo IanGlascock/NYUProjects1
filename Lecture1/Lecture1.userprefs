@@ -1,9 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/PoemManager.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/IntroTextAdve.cs">
     <Files>
-      <File FileName="Assets/scripts/PoemManager.cs" Line="10" Column="36" />
-      <File FileName="Assets/scripts/PoemManager.cs" Line="8" Column="27" />
+      <File FileName="Assets/scripts/IntroTextAdve.cs" Line="57" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

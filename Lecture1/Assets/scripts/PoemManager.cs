@@ -7,7 +7,7 @@ public class PoemManager : MonoBehaviour {
 	void Start () {
 		Debug.Log ("Hello World");
 
-		GetComponent<TextMesh>().text = "scarred trees Waver not\nthe Ax stroke is remembered\n Rot spreads from the core";
+		GetComponent<TextMesh>().text = "scarred trees Waver not\nthe Ax stroke is remembered\n Rotting spreads from the \ncore";
 	}
 	
 	// Update is called once per frame
