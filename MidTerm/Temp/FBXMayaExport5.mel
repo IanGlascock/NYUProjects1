@@ -1,0 +1,23 @@
+print "Starting maya loading and fbx conversion \n";
+	
+if (`file -q -exists "/Users/ian/Documents/-Unity Proejcts/MidTerm/Assets/Maya/wall.ma"`)
+{		
+	file -o "/Users/ian/Documents/-Unity Proejcts/MidTerm/Assets/Maya/wall.ma";
+	FBXExportEmbeddedTextures -v false;
+	// FBXExportHardEdges -v true;
+	FBXExportApplyConstantKeyReducer -v false;
+	FBXExportShowUI -v false;
+
+	print "Before fbx export\n";
+	FBXExport -f "/Users/ian/Documents/-Unity Proejcts/MidTerm/Temp/ExportedFBXFile.fbx";
+	print "after fbx export\n";
+}
+else
+	print "Could not open Maya file.";
+
+
+system ("rm \"/Users/ian/Documents/-Unity Proejcts/MidTerm/Temp/CommandPipe\"");
+
+$donepipeKill = `fopen "/Users/ian/Documents/-Unity Proejcts/MidTerm/Temp/SyncPipeKill" "w"`;
+fwrite $donepipeKill "Done";
+fclose $donepipeKill;

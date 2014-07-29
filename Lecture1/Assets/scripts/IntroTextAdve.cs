@@ -5,6 +5,7 @@ public class IntroTextAdve : MonoBehaviour {
 
 	string currentRoom = "Lobby"; // remembers our current location in world
 	bool hasStudentID = false;
+	bool hasKeys = false;
 
 
 	void Update () {
@@ -37,17 +38,57 @@ public class IntroTextAdve : MonoBehaviour {
 				textBuffer += "\nYou can't go in without your Id card, though...";
 			} else {
 				textBuffer += "\nYou Swipe your student ID and the guard smiles.";
+				textBuffer += "\npress [W] to go to 13th Floor";
+				textBuffer += "\npress [S] to go the Basement";
+			}
+			if (Input.GetKeyDown (KeyCode.W) ) { // if player pushes W Key
+				currentRoom = "13floor";
+			} else if ( Input.GetKeyDown (KeyCode.S) ) {
+				currentRoom = "Basement";
 			}
 		} 
 
 		else if (currentRoom == "Outside") {
 			// all your OUTSIDE code will go here
 			textBuffer += "\nIt is really Hot, Why would you go outside?";
-			textBuffer += "\npress [W] to go to the Lobby, LIke Right Now";
+			textBuffer += "\npress [W] to go to the Lobby, Like Right Now";
+			textBuffer += "\n(oh hey you found your student ID on the floor!)";
 			if (hasStudentID == false) {
-				textBuffer += "\n(oh hey you found your student ID on the floor!)";
 				hasStudentID = true;
 			} if ( Input.GetKeyDown (KeyCode.W) ) {
+				currentRoom = "Lobby";
+			}
+		}
+
+		else if (currentRoom == "13floor") {
+			textBuffer += "\npress [W] to go to your Room.";
+			textBuffer += "\npress [S] to retrun to the Elevator";
+			if (Input.GetKeyDown (KeyCode.W) ) { 
+				currentRoom = "yourRoom";
+			} else if ( Input.GetKeyDown (KeyCode.S) ) {
+				currentRoom = "Elevator";
+			}
+		}
+
+		else if (currentRoom == "yourRoom") {
+			textBuffer += "\nThere is a party in your room";
+			textBuffer += "\nAnd you where invited. ";
+			textBuffer += "\npress [S] to retrun to leave the party. ";
+
+			if (Input.GetKeyDown (KeyCode.W) ) { 
+				currentRoom = "13floor";
+			}
+		}
+
+		else if (currentRoom == "Basement") {
+			textBuffer += "\nyou find your self lost \nin time and space.";
+			textBuffer += "\nyour keys where also lost in time and space \nyou have found your keys.";
+			if (hasKeys == false){
+				hasKeys = true;
+			}
+			textBuffer += "\nAfter what seems to be an etermity\n you find a stair case";
+			textBuffer += "\npress [W] to climb the stairs";
+			if (Input.GetKeyDown (KeyCode.W) ) { 
 				currentRoom = "Lobby";
 			}
 		}

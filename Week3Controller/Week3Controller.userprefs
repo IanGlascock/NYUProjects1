@@ -1,0 +1,13 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../MidTerm/Assets/Scripts/CharMove.cs">
+    <Files>
+      <File FileName="Assets/Scripts/RigidbodyContorllerA.cs" Line="30" Column="3" />
+      <File FileName="../MidTerm/Assets/Scripts/CharMove.cs" Line="17" Column="5" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
